@@ -16,7 +16,10 @@ return new class extends Migration
             $table->integer('nis');
             $table->string('nama');
             $table->string('alamat');
+<<<<<<< HEAD
             $table->foreignId('sekolah_id')->constrained('sekolah')->cascadeOnDelete()->cascadeOnUpdate();
+=======
+>>>>>>> 1a49703801dd6a57573c9bf903a4b9ce97cb1a71
             $table->timestamps();
         });
     }
