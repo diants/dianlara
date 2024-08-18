@@ -8,6 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Sekolah extends Model
 {
     use HasFactory;
-    protected $table = 'sekolah';
-}
 
+    protected $table = 'sekolah';
+    protected $guarded = ['id'];
+
+    function siswa() {
+        $this->hasMany(Siswa::class);
+    }
+}

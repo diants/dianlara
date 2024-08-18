@@ -12,11 +12,7 @@ class Siswa extends Model
     protected $table = 'siswa';
     protected $guarded = ['id'];
 
-    // protected $primaryKey = 'id_siswa';
-    // protected $fillable = [
-    //     'nis',
-    //     'nama',
-    //     'alamat',
-    // ];
-
+    function sekolah() {
+        return $this->belongsTo(Sekolah::class);
+    }
 }
